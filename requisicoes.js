@@ -1,4 +1,4 @@
-const url = "https://doctus-wiki-frontend.onrender.com/api/pages";
+const url = "https://doctus-wiki-backend.onrender.com/api/pages";
 
 export const chamarPaginas = async () => {
   try {
