@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --color-1: #ffffff;
+  --color-2: #f6f6f6;
+  --color-3: rgb(238, 238, 238);
+  --color-4: #e7e7e7;
+  --color-5: #8b8b8b;
+  --color-6: #383838;
+  --color-7: #2b2b2b;
+}
+
+body {
+  background-color: var(--color-1);
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  position: relative;
+}
+
+menu {
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  /* border-right: 1px solid var(--color-4); */
+}
+
+h1 {
+  font-size: 1.65em;
+  color: var(--color-6);
+  line-height: 31px;
+}
+
+#input-pesquisa {
+  width: 100%;
+  background-color: var(--color-2);
+  padding: 13px 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--color-3);
+  outline: none;
+  font-weight: 400;
+}
+
+#botao-nova-pagina {
+  background-color: var(--color-6);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: var(--color-4);
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 0.85em;
+  transition: 0.3s;
+}
+#botao-nova-pagina:hover {
+  background-color: var(--color-7);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#icon {
+  margin-left: 9px;
+  zoom: 90%;
+  margin-top: 2px;
+}
+#icon:hover {
+  color: var(--color-1);
+}
+
+#container-lista-paginas {
+  min-width: 107%;
+  height: calc(100% - 195px);
+  margin-top: 30px;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  padding-right: 10px;
+}
+
+details {
+  margin: 5px 0;
+  min-width: 250px;
+}
+
+details summary {
+  cursor: pointer;
+  padding: 10px 14px;
+  list-style: none;
+  font-weight: 500;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  color: var(--color-6);
+}
+details summary:hover {
+  background-color: var(--color-2);
+  border: 1px solid var(--color-3);
+  color: var(--color-7);
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+.submenu {
+  padding-left: 20px;
+  margin: 5px 0;
+}
+
+main {
+  width: calc(100% - 250px);
+  background-color: var(--color-2);
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--color-3);
+  overflow-y: scroll;
+}
+main::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+}
+
+#container-documentacao {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  margin: 5px auto 0 auto;
+}
+
+h2 {
+  color: var(--color-6);
+  font-size: 2em;
+}
+
+#top-container-documentacao {
+  padding-bottom: 10px;
+}
+#top-container-documentacao p {
+  color: var(--color-5);
+  font-size: 0.85em;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.topico {
+  display: flex;
+  align-items: center;
+}
+
+#flex {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#botoes button {
+  background-color: var(--color-6);
+  padding: 8px 12px;
+  border-radius: 7px;
+  border: none;
+  color: var(--color-2);
+}
+#botoes button:hover {
+  background-color: var(--color-7);
+  cursor: pointer;
+}
+
+#container-criar-pagina,
+#container-remover-pagina {
+  position: absolute;
+  width: 100%;
+  height: 100dvh;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+#blur-criar-pagina,
+#blur-remover-pagina {
+  background-color: rgba(0, 0, 0, 0.267);
+  width: 100%;
+  height: 100dvh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+#form-criar-pagina {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  background-color: white;
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 15px;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+}
+
+#card-remover-pagina {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  background-color: white;
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 15px;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  text-align: center;
+}
+
+#p-remover-pagina {
+  font-weight: 500;
+}
+
+#flex-remover-pagina {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+#flex-remover-pagina button {
+  width: 47%;
+  padding: 13px 0;
+  border-radius: 10px;
+  border: none;
+  font-size: 0.9em;
+}
+#flex-remover-pagina button:hover {
+  cursor: pointer;
+}
+
+#flex-remover-pagina #button-cancelar {
+  background-color: rgb(211, 76, 76);
+  color: var(--color-3);
+}
+
+#flex-remover-pagina #button-sim {
+  background-color: var(--color-6);
+  color: var(--color-3);
+}
+
+#form-criar-pagina p {
+  color: var(--color-6);
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+#form-criar-pagina label {
+  font-size: 0.93em;
+  margin-top: 15px;
+  margin-bottom: 4px;
+}
+
+#form-criar-pagina input,
+textarea,
+select {
+  width: 100%;
+  background-color: var(--color-2);
+  padding: 13px 15px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid var(--color-3);
+  outline: none;
+  font-weight: 400;
+}
+
+#form-criar-pagina textarea {
+  min-height: 200px;
+  resize: none;
+}
+
+#close {
+  color: var(--color-6);
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 1px;
+  border-radius: 50%;
+  zoom: 95%;
+  margin-top: 3px;
+  border: 1px solid var(--color-5);
+}
+#close:hover {
+  background-color: var(--color-3);
+  color: var(--color-7);
+  cursor: pointer;
+  border: 1px solid var(--color-7);
+}
+
+#button-submit-criar-pagina {
+  background-color: var(--color-6);
+  padding: 13px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 15px;
+  color: var(--color-3);
+}
+#button-submit-criar-pagina:hover {
+  background-color: var(--color-7);
+  cursor: pointer;
+  color: var(--color-1);
+}
+
+#bottom-container-documentacao {
+  margin-top: 40px;
+}
+#bottom-container-documentacao h3 {
+  font-size: 1.2em;
+  margin-bottom: 60px;
+  color: var(--color-6);
+  width: 100%;
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-4);
+  padding-bottom: 20px;
+}
+#bottom-container-documentacao h4 {
+  font-size: 1.1em;
+  color: var(--color-7);
+  margin-top: 30px;
+  font-weight: 600;
+}
+#bottom-container-documentacao small {
+  font-size: 1.03em;
+}
+#bottom-container-documentacao p {
+  color: rgb(104, 104, 104);
+  font-weight: 400;
+  margin-top: 5px;
+}

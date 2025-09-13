@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <menu>
+      <header>
+        <h1>Documentação Doctus</h1>
+        <input
+          type="text"
+          placeholder="Pesquisar"
+          autocomplete="off"
+          id="input-pesquisa"
+        />
+        <button id="botao-nova-pagina">
+          Criar página
+          <span class="material-symbols-outlined" id="icon">
+            arrow_right_alt
+          </span>
+        </button>
+      </header>
+      <section id="container-lista-paginas"></section>
+    </menu>
+    <main>
+      <div id="container-documentacao">
+        <section id="top-container-documentacao">
+          <p id="historico">
+            <span class="material-symbols-outlined">
+              keyboard_arrow_right
+            </span>
+            Cadastro
+            <span class="material-symbols-outlined">
+              keyboard_arrow_right
+            </span>
+            Cadastro de Clientes
+          </p>
+          <div id="flex">
+            <h2 id="h2">Cadastro de clientes</h2>
+            <div id="botoes">
+              <button id="botao-editar">Editar</button>
+              <button id="botao-remover">Excluir</button>
+            </div>
+          </div>
+        </section>
+        <section id="bottom-container-documentacao"></section>
+      </div>
+    </main>
+    <div id="container-criar-pagina">
+      <div id="blur-criar-pagina"></div>
+      <form id="form-criar-pagina">
+        <span id="close" class="material-symbols-outlined"> close </span>
+        <p>Criar nova página</p>
+        <label for="titulo-pagina">Título da página</label>
+        <input
+          type="text"
+          id="titulo-pagina"
+          placeholder="Insira o título da página"
+          autocomplete="off"
+          required
+        />
+        <label for="ramificacao-pagina">Ramificação de página</label>
+        <select id="ramificacao-pagina" required></select>
+        <label for="conteudo-pagina">Conteúdo da página</label>
+        <textarea
+          id="conteudo-pagina"
+          placeholder="
+Escreva o conteúdo da página com tags HTML. 
+
+<h3>Título da classe</h3>
+<h4>Nome da propriedade</h4>
+<p>Descrição da propriedade</p>
+"
+          required
+        ></textarea>
+        <button type="submit" id="button-submit-criar-pagina">
+          Criar página
+        </button>
+      </form>
+    </div>
+    <div id="container-remover-pagina">
+      <div id="blur-remover-pagina"></div>
+      <div id="card-remover-pagina">
+        <p id="p-remover-pagina"></p>
+        <div id="flex-remover-pagina">
+          <button id="button-sim">Sim</button>
+          <button id="button-cancelar">Cancelar</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="carregar_paginas.js"></script>
+    <script type="module" src="requisicoes.js"></script>
+    <script type="module" src="criar_pagina.js"></script>
+  </body>
+</html>
